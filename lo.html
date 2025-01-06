@@ -1,0 +1,77 @@
+<html> 
+
+  <head> 
+    <h1>Task Manager</h1> 
+    <title>Task Manager</title>
+    <link href="priortise.css" rel="stylesheet">
+  </head> 
+
+  <body> 
+    <main> 
+<!-- This takes name and welcomes the user --> 
+
+      <section id="userInfo&Welcome">
+        <form> 
+          <label for="name">Name:</label> 
+          <input type="text" name="name" id="name"> 
+          <button id="nameTaker" type="button">Submit</button> 
+          <p id="welcomeMes"></p> 
+        </form> 
+       </section> 
+
+    <br> 
+    <br> 
+
+ 
+       <section id="introduction"> 
+         <article>Welcome <span id="frsArt"></span> to my website,  
+         here i've created a task mananging application for any 
+         tasks you need do today.</article> 
+        </section> 
+
+    <br> 
+    <br> 
+
+ 
+
+<!-- This will take user input and add it as a list with checkbutton button's --> 
+
+     <section id="ToDo"> 
+       <label for="entry">Whats the Plan?</label> 
+       <input type="text" name="thingToDo" id="entry"> 
+       <button id="addATaskmM" type="button">Add</button> 
+       <div id="stor"> 
+
+       </div> 
+    </section> 
+    <br> 
+    <br>  
+    <br> 
+
+ 
+
+<!-- Choosing the priority level for tasks added --> 
+
+    <section name="priorityChusr"> 
+      <table border="1"> 
+        <tr> 
+          <th>High</th> 
+          <th>Medium</th> 
+          <th>Low</th> 
+        </tr>
+
+         <td>1</td> 
+         <td>2</td> 
+         <td>3</td> 
+        </table> 
+    </section> 
+
+ 
+
+    </main>  
+    <script type="module" src="takeName&Intro.js"></script> 
+    <script type="module" src="tdl.js"></script>
+    <script type="module" src="priTable.js"></script> 
+    <script type="module" src="midMan.js"></script>
+  </body> 
+</html> 
