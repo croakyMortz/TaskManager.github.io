@@ -15,7 +15,9 @@ export const toDoList = () => {
     
     const checkBox = document.createElement("input"); 
     checkBox.type = "checkbox"; 
+    
 
+    //Priority choosing
     const select = document.createElement("select");
     const hyOpt = document.createElement("option");
     const meOpt = document.createElement("option");
@@ -39,28 +41,35 @@ export const toDoList = () => {
     select.append(meOpt);
     select.append(loOpt);
 
-     
+    //delete button
     const deleteButt = document.createElement("button"); 
     deleteButt.textContent = ('Remove'); 
     deleteButt.onclick = function() { 
     newDiv.remove(); 
     };
-     
+    
+
+    const taskText = document.createElement("span");
+    taskText.textContent = data;
+
+
+    //appending
     newDiv.append(checkBox); 
-    newDiv.append(text);
+    newDiv.append(taskText);
     newDiv.append(select); 
     newDiv.append(deleteButt); 
     container.append(newDiv); 
     
+    
    
+/*logging task and priority to console, works...add 'console.log' instead of
+     'arrOfTasks.push' for testing'
+    */
+    select.addEventListener("change", () => {
+        const selectOption = select.value;
+        arrOfTasks.push("Task: " + taskText.textContent + " Priority: " + selectOption)
+    });
 
-    const tasks = {
-        description: data,
-        priority: select.value
-
-    };
-
-    arrOfTasks.push(tasks);
 
     document.getElementById("entry").value = ''; 
    
@@ -70,18 +79,9 @@ export function getTasks() {
     return arrOfTasks;
 };
 
-/*
-const nan = 'heel';
 
 
-export function mn() {
-    return nan;
-}
 
-const finRes = document.getElementById("stor").value;
-export function getFin() {
-    return finRes;
-}  */
 
 
 
